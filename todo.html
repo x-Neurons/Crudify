@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <nav class="all-user-nav">
+        <h2>CRUDify</h2>
+        <ul class="all-user-first-ul">
+            <a href="./allUser.html">
+                <li>All Users</li>
+            </a>
+            <a href="./addUser.html">
+                <li>Add User</li>
+            </a>
+            <a href="./todo.html">
+                <li>My Tasks</li>
+            </a>
+        </ul>
+        <ul class="all-user-second-ul">
+            <li id="user" class="user">Emily Jhonson
+                <span>
+                    <svg width=" 24" height="14" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11.0001 3.67157L13.0001 3.67157L13.0001 16.4999L16.2426 13.2574L17.6568 14.6716L12 20.3284L6.34314 14.6716L7.75735 13.2574L11.0001 16.5001L11.0001 3.67157Z"
+                            fill="currentColor" />
+                    </svg>
+                </span>
+            </li>
+            <li class="circle"><svg width="24" height="14" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0ZM4.14355 13.5165C4.85219 17.2096 8.10023 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C8.0886 4 4.83283 6.80704 4.13728 10.5165L6.72824 10.5071C7.37819 8.20738 9.49236 6.52222 12.0001 6.52222C15.0254 6.52222 17.4779 8.9747 17.4779 12C17.4779 15.0253 15.0254 17.4778 12.0001 17.4778C9.49752 17.4778 7.3869 15.7995 6.73228 13.5071L4.14355 13.5165ZM9.52234 12C9.52234 13.3684 10.6317 14.4778 12.0001 14.4778C13.3685 14.4778 14.4779 13.3684 14.4779 12C14.4779 10.6316 13.3685 9.52222 12.0001 9.52222C10.6317 9.52222 9.52234 10.6316 9.52234 12Z"
+                        fill="black" />
+                </svg></li>
+        </ul>
+    </nav>
+    <ul class="logout">
+        <a href="/index.html">
+            <li id="logout">
+                Logout
+                <span>
+                    <svg width="19" height="12" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.51428 20H4.51428C3.40971 20 2.51428 19.1046 2.51428 18V6C2.51428 4.89543 3.40971 4 4.51428 4H8.51428V6H4.51428V18H8.51428V20Z"
+                            fill="white" />
+                        <path
+                            d="M13.8418 17.385L15.262 15.9768L11.3428 12.0242L20.4857 12.0242C21.038 12.0242 21.4857 11.5765 21.4857 11.0242C21.4857 10.4719 21.038 10.0242 20.4857 10.0242L11.3236 10.0242L15.304 6.0774L13.8958 4.6572L7.5049 10.9941L13.8418 17.385Z"
+                            fill="white" />
+                    </svg>
+                </span>
+            </li>
+        </a>
+    </ul>
+    <!-- nav -->
+
+    <div class="main-wrapper">
+        <center>
+            <h1 style="color: rgb(71, 71, 71); font-size: 40px; padding-top: 25px;">My Todos</h1>
+        </center>
+
+        <div class="todo-search">
+            <div class="todo-search-bar">
+                <input type="search" name="" id="todo-bar-text" placeholder="Enter Here...">
+                <button class="todo-search-button" id="todo-search-button">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 6C12.5523 6 13 6.44772 13 7V11H17C17.5523 11 18 11.4477 18 12C18 12.5523 17.5523 13 17 13H13V17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17V13H7C6.44772 13 6 12.5523 6 12C6 11.4477 6.44772 11 7 11H11V7C11 6.44772 11.4477 6 12 6Z"
+                            fill="blue" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M5 22C3.34315 22 2 20.6569 2 19V5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5ZM4 19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5C20 4.44772 19.5523 4 19 4H5C4.44772 4 4 4.44772 4 5V19Z"
+                            fill="blue" />
+                    </svg>
+                </button>
+
+            </div>
+        </div>
+        <!-- /.search -->
+
+        <div class="todo-content">
+            <ul class="todo-ul" id="todo-ul">
+                <li class="todo-li first-li" id="todo-li">
+                    <input type="text" id="todo-li-text" class="todo-li-text">
+                        <button id="todo-enter-btn" class="todo-enter-btn">
+                            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.2426 16.3137L6 12.071L7.41421 10.6568L10.2426 13.4853L15.8995 7.8284L17.3137 9.24262L10.2426 16.3137Z"
+                                    fill="white" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z"
+                                    fill="white" />
+                            </svg>
+                        </button> 
+                        <button id="todo-delete-btn" class="todo-delete-btn">
+                            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M17 5V4C17 2.89543 16.1046 2 15 2H9C7.89543 2 7 2.89543 7 4V5H4C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H5V18C5 19.6569 6.34315 21 8 21H16C17.6569 21 19 19.6569 19 18V7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H17ZM15 4H9V5H15V4ZM17 7H7V18C7 18.5523 7.44772 19 8 19H16C16.5523 19 17 18.5523 17 18V7Z"
+                                    fill="white" />
+                                <path d="M9 9H11V17H9V9Z" fill="white" />
+                                <path d="M13 9H15V17H13V9Z" fill="white" />
+                            </svg>
+                        </button>
+                </li>
+            </ul>
+        </div>
+        <!-- /.todo-content -->
+    </div>
+    <!-- /.main-wrapper -->
+
+    <script src="/todo.js"></script>
+</body>
+
+</html>

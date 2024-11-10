@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="all-user-nav">
+        <h2>CRUDify</h2>
+        <ul class="all-user-first-ul">
+            <a href="./allUser.html">
+                <li>All Users</li>
+            </a>
+            <a href="./addUser.html">
+                <li>Add User</li>
+            </a>
+            <a href="./todo.html"><li>My Tasks</li></a>
+        </ul>
+        <ul class="all-user-second-ul">
+            <li id="user" class="user">Emily Jhonson
+                <span>
+                    <svg width=" 24" height="14" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11.0001 3.67157L13.0001 3.67157L13.0001 16.4999L16.2426 13.2574L17.6568 14.6716L12 20.3284L6.34314 14.6716L7.75735 13.2574L11.0001 16.5001L11.0001 3.67157Z"
+                            fill="currentColor" />
+                    </svg>
+                </span>
+            </li>
+            <li class="circle"><svg width="24" height="14" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0ZM4.14355 13.5165C4.85219 17.2096 8.10023 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C8.0886 4 4.83283 6.80704 4.13728 10.5165L6.72824 10.5071C7.37819 8.20738 9.49236 6.52222 12.0001 6.52222C15.0254 6.52222 17.4779 8.9747 17.4779 12C17.4779 15.0253 15.0254 17.4778 12.0001 17.4778C9.49752 17.4778 7.3869 15.7995 6.73228 13.5071L4.14355 13.5165ZM9.52234 12C9.52234 13.3684 10.6317 14.4778 12.0001 14.4778C13.3685 14.4778 14.4779 13.3684 14.4779 12C14.4779 10.6316 13.3685 9.52222 12.0001 9.52222C10.6317 9.52222 9.52234 10.6316 9.52234 12Z"
+                        fill="black" />
+                </svg></li>
+        </ul>
+    </nav>
+    <ul class="logout">
+        <a href="/index.html">
+            <li id="logout">
+                Logout
+                <span>
+                    <svg width="19" height="12" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.51428 20H4.51428C3.40971 20 2.51428 19.1046 2.51428 18V6C2.51428 4.89543 3.40971 4 4.51428 4H8.51428V6H4.51428V18H8.51428V20Z"
+                            fill="white" />
+                        <path
+                            d="M13.8418 17.385L15.262 15.9768L11.3428 12.0242L20.4857 12.0242C21.038 12.0242 21.4857 11.5765 21.4857 11.0242C21.4857 10.4719 21.038 10.0242 20.4857 10.0242L11.3236 10.0242L15.304 6.0774L13.8958 4.6572L7.5049 10.9941L13.8418 17.385Z"
+                            fill="white" />
+                    </svg>
+                </span>
+            </li>
+        </a>
+    </ul>
+    <!-- nav -->
+    <center>
+        <h1 style="color: rgb(71, 71, 71); margin: 30px;">
+            ADD USER
+            <span>
+                <svg width="54" height="34" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M8 11C10.2091 11 12 9.20914 12 7C12 4.79086 10.2091 3 8 3C5.79086 3 4 4.79086 4 7C4 9.20914 5.79086 11 8 11ZM8 9C9.10457 9 10 8.10457 10 7C10 5.89543 9.10457 5 8 5C6.89543 5 6 5.89543 6 7C6 8.10457 6.89543 9 8 9Z"
+                        fill="rgb(71,71,71)" />
+                    <path
+                        d="M11 14C11.5523 14 12 14.4477 12 15V21H14V15C14 13.3431 12.6569 12 11 12H5C3.34315 12 2 13.3431 2 15V21H4V15C4 14.4477 4.44772 14 5 14H11Z"
+                        fill="rgb(71,71,71)" />
+                    <path d="M18 7H20V9H22V11H20V13H18V11H16V9H18V7Z" fill="rgb(71,71,71)" />
+                </svg>
+            </span>
+        </h1>
+    </center>
+
+    <div class="edit-addUser">
+        <div class="edit-popup">
+            <h2>Edit User</h2>
+            <span class="image-url">
+                <label for="">Image URL:</label><br>
+                <input type="text" id="image-url" placeholder=""><br>
+            </span>
+            <span class="f-name">
+                <label for="">First Name:</label><br>
+                <input type="text" id="f-name" placeholder=""><br>
+            </span>
+            <span class="l-name">
+                <label for="">Last Name:</label><br>
+                <input type="text" id="l-name" placeholder=""><br>
+            </span>
+            <span class="phone-number">
+                <label for="">Phone No:</label><br>
+                <input type="text" id="phone-number" placeholder=""><br>
+            </span>
+            <span class="email">
+                <label for="">Email:</label><br>
+                <input type="email" id="email-addUser" placeholder=""><br>
+            </span>
+            <span class="address" id="addUser-address">
+                <label for="">Address:</label><br>
+                <input type="text" id="address-addUser" placeholder=""><br>
+            </span>
+            <span class="dob">
+                <label for="">Date of Birth:</label><br>
+                <input type="date" id="dob" placeholder="yyyy-mm-dd"><br>
+            </span>
+            <span class="age">
+                <label for="">Age:</label><br>
+                <input type="text" id="age" placeholder="" style="color: black;"><br>
+            </span>
+            <span class="gender">
+                <label for="">Gender:</label><br>
+                <select name="" id="gender" style="color: black;">
+                    <option value="Male">Male</option><br>
+                    <option value="Female">Female</option><br>
+                </select>
+            </span>
+            <button id="addUser-btn">Add User</button>
+        </div>
+        <!-- /.edi-popup -->
+    </div>
+    <!-- /.edit -->
+
+    <div class="save-popup" id="save-popup">
+        <h2>User Added</h2>
+     </div>
+
+    <script src="/addUser.js"></script>
+    <!-- <script src="/api.js"></script> -->
+</body>
+
+</html>
